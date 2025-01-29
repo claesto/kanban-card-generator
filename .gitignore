@@ -1,2 +1,8 @@
-kanban.pdf
+__pycache__/
+venv/
+
 .DS_Store
+
+
+kanban.pdf
+generate_cards.py

@@ -39,6 +39,7 @@ class KanbanCard:
         self.store = store
         self.list_name = list_name
 
+        
         self.create_kanban_card()
 
     def generate_qr_code(self, filepath="qrcode.png"):
@@ -54,19 +55,18 @@ class KanbanCard:
         qrcode = segno.make_qr(qr_url)
         qrcode.save(filepath, scale=3, border=0)
 
-    def create_kanban_card(self, output_path="kanban.pdf"):
+    def create_kanban_card(self):
         """
         Generate a Kanban card PDF.
-
-        Args:
-            output_path (str): The file path to save the Kanban card.
         """
         qrcode_path = "qrcode.png"
         self.generate_qr_code(qrcode_path)
 
+        output_path=f"kanban-cards/{self.brand}-{self.item}-kanban.pdf"
+
         try:
             canvas = Canvas(output_path, pagesize=(8.5 * cm, 5.5 * cm))
-            canvas.setFont("Courier", 20)
+            canvas.setFont("Courier", 16)
 
             # Item name
             canvas.setFillColor(self.default_colors["dark"])
