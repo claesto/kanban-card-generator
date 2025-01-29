@@ -65,6 +65,8 @@ Example on how to create a Kanban card.
 1. `2` is the kanban level
 2. `5` is the quantity to purchase
 
+I also included a `generate_cards.py` file to showcase how you'd use this class to generate multiple cards for different products.
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
